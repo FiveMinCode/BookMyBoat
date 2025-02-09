@@ -22,18 +22,21 @@ namespace UserManagement.API.Controllers
         [HttpGet("GetUsers")]
         public IEnumerable<User> GetUsers()
         {
+            _logger.LogInformation("Getting users");
             return _userManagementRepository.GetUsers();
         }
 
         [HttpPost("SaveUser")]
         public bool SaveUser(User user)
         {
+            _logger.BeginScope("Saving user {UserName}", user.UserName);
             return _userManagementRepository.SaveUser(user);
         }
         [Authorize]
         [HttpGet("GetBookings")]
         public IEnumerable<UserBooking> GetBookings()
         {
+            _logger.LogInformation("Getting bookings");
             var ownerId = User.Claims.FirstOrDefault(c => c.Type == "sub")?.Value;
             return _userManagementRepository.GetAll(ownerId);
         }

@@ -2,10 +2,16 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.JsonWebTokens;
+using Observability;
 using UserManagement.API.DbContexts;
 using UserManagement.API.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+
+//setup logging, tracing and metrics
+var logger = LoggerSetup.Init(builder);
+TracingSetup.Init(builder, logger);
+MetricsSetup.Init(builder, logger); 
 
 // Add services to the container.
 builder.Services.AddDbContext<UserManagementContext>(options =>

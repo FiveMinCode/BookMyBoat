@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Observability\Observability.csproj" />
     <ProjectReference Include="..\UserManagment.Model\UserManagment.Model.csproj" />
   </ItemGroup>
 
