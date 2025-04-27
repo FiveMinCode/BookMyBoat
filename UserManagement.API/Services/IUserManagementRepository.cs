@@ -6,6 +6,8 @@ namespace UserManagement.API.Services
     {
         List<UserBooking> GetAll(string ownerId);
         List<User> GetUsers();
+        User GetUser(int id);
+        List<User> GetUsersList();
         bool SaveUser(User user);
     }
 }

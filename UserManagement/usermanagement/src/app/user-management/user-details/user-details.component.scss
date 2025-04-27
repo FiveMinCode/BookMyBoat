@@ -1,0 +1,39 @@
+/* user-detail.component.scss */
+.user-detail-container {
+    padding: 20px;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  
+    .user-card {
+      width: 400px; /* Adjust width as needed */
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  
+    .detail-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #eee; /* Adds a seperator between rows */
+      padding-bottom: 5px;
+  
+      .label {
+        font-weight: 600;
+      }
+  
+      .value {
+        flex: 1; /* Allows the value to take up remaining space */
+        text-align: right;
+        margin-left: 10px;
+      }
+    }
+  }

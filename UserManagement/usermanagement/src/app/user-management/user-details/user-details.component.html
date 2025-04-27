@@ -1,0 +1,35 @@
+<div class="user-detail-container">
+    <h2>User Details</h2>
+  
+    <div *ngIf="userForm" class="user-card">
+      <div class="detail-row">
+        <span class="label">Name:</span>
+        <span class="value">{{ userForm.get('name')?.value }}</span>
+      </div>
+  
+      <div class="detail-row">
+        <span class="label">Email:</span>
+        <span class="value">{{ userForm.get('email')?.value }}</span>
+      </div>
+  
+      <div class="detail-row">
+        <span class="label">Phone:</span>
+        <span class="value">{{ userForm.get('phone')?.value }}</span>
+      </div>
+  
+      <div class="detail-row">
+        <span class="label">Street:</span>
+        <span class="value">{{ userForm.get('street')?.value }}</span>
+      </div>
+  
+      <div class="detail-row">
+        <span class="label">City:</span>
+        <span class="value">{{ userForm.get('city')?.value }}</span>
+      </div>
+  
+      <div class="detail-row">
+        <span class="label">Zipcode:</span>
+        <span class="value">{{ userForm.get('zipcode')?.value }}</span>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,26 @@
+<div class="user-list-container">
+    <h2>User List</h2>
+    <table class="user-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users$ | async">
+          <td>{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.phone }}</td>
+          <td>
+            <button (click)="viewDetails(user.id)">View Details</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <input id="searchBox" type="text" placeholder="Search users" style="margin-bottom: 10px; padding: 5px; width: 200px;" />
+  </div>

@@ -67,6 +67,37 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetryMechanism", "RetryMech
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resiliency", "Resiliency\Resiliency.csproj", "{F5BB654D-9015-4A8F-91B0-2C7F0A763F8E}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "UserManagement", "UserManagement\", "{015FC229-DEDE-4F2B-94FC-A3A8C168AA02}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_61376"
+		Debug.AspNetCompiler.PhysicalPath = "UserManagement\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61376\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_61376"
+		Release.AspNetCompiler.PhysicalPath = "UserManagement\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61376\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "61376"
+		SlnRelativePath = "UserManagement\"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Composition", "Composition", "{B6D63288-ACBB-481C-BA0A-0FAF84AF4102}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Composition", "Composition\Composition.csproj", "{E0349B15-4591-4FBD-A1BB-D0F28D47BCA7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Booking", "Booking", "{D097644C-3D88-4E13-BFA0-5D2E348C192D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Booking", "Booking\Booking.csproj", "{8C09B566-087A-4AB5-9565-C7F985630BA8}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{ECD0FEF5-5239-4744-8FB9-18603D830DBB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -113,6 +144,22 @@ Global
 		{F5BB654D-9015-4A8F-91B0-2C7F0A763F8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5BB654D-9015-4A8F-91B0-2C7F0A763F8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5BB654D-9015-4A8F-91B0-2C7F0A763F8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{015FC229-DEDE-4F2B-94FC-A3A8C168AA02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{015FC229-DEDE-4F2B-94FC-A3A8C168AA02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{015FC229-DEDE-4F2B-94FC-A3A8C168AA02}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{015FC229-DEDE-4F2B-94FC-A3A8C168AA02}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{E0349B15-4591-4FBD-A1BB-D0F28D47BCA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0349B15-4591-4FBD-A1BB-D0F28D47BCA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0349B15-4591-4FBD-A1BB-D0F28D47BCA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0349B15-4591-4FBD-A1BB-D0F28D47BCA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C09B566-087A-4AB5-9565-C7F985630BA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C09B566-087A-4AB5-9565-C7F985630BA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C09B566-087A-4AB5-9565-C7F985630BA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C09B566-087A-4AB5-9565-C7F985630BA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECD0FEF5-5239-4744-8FB9-18603D830DBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECD0FEF5-5239-4744-8FB9-18603D830DBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECD0FEF5-5239-4744-8FB9-18603D830DBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECD0FEF5-5239-4744-8FB9-18603D830DBB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -125,5 +172,8 @@ Global
 		{FE41F117-7192-409B-A78B-FCA7DE083D32} = {1FB66D83-F29F-4466-9C38-B7A62FCAFDBF}
 		{4F6ED07E-6CF8-4287-A0D1-974FC91A5CBC} = {1FB66D83-F29F-4466-9C38-B7A62FCAFDBF}
 		{F5BB654D-9015-4A8F-91B0-2C7F0A763F8E} = {1FB66D83-F29F-4466-9C38-B7A62FCAFDBF}
+		{015FC229-DEDE-4F2B-94FC-A3A8C168AA02} = {B0DC0478-10F2-4510-8AAB-2DB7FE5EE752}
+		{E0349B15-4591-4FBD-A1BB-D0F28D47BCA7} = {B6D63288-ACBB-481C-BA0A-0FAF84AF4102}
+		{8C09B566-087A-4AB5-9565-C7F985630BA8} = {D097644C-3D88-4E13-BFA0-5D2E348C192D}
 	EndGlobalSection
 EndGlobal

@@ -31,10 +31,10 @@ public partial class UserManagementContext : DbContext
             entity.Property(e => e.Password).HasMaxLength(255);
             entity.Property(e => e.UserName).HasMaxLength(255);
 
-            entity.HasOne(d => d.Profile).WithMany(p => p.Users)
-                .HasForeignKey(d => d.ProfileId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__User__ProfileId__276EDEB3");
+            //entity.HasOne(d => d.Profile).WithMany(p => p.Users)
+            //    .HasForeignKey(d => d.ProfileId)
+            //    .OnDelete(DeleteBehavior.ClientSetNull)
+            //    .HasConstraintName("FK__User__ProfileId__276EDEB3");
         });
 
         modelBuilder.Entity<UserBooking>(entity =>

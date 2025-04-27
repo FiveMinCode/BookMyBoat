@@ -26,4 +26,4 @@ namespace RetryMechanism
 }
 
 // Usage example
-var postResponse = RetryMechanismUse.ExecuteAsync<List<Post>>(httpClient, "https://jsonplaceholder.typicode.com/posts");
+//var postResponse = RetryMechanismUse.ExecuteAsync<List<Post>>(httpClient, "https://jsonplaceholder.typicode.com/posts");

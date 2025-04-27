@@ -1,4 +1,5 @@
-﻿using UserManagement.API.DbContexts;
+﻿using Microsoft.EntityFrameworkCore;
+using UserManagement.API.DbContexts;
 using UserManagment.Model;
 
 namespace UserManagement.API.Services
@@ -19,6 +20,16 @@ namespace UserManagement.API.Services
         public List<User> GetUsers()
         {
             return _context.Users.ToList();
+        }
+
+        public User GetUser(int id)
+        {
+            return _context.Users.Include(t => t.Profile).FirstOrDefault(t => t.Id == id) ?? new User();
+        }
+
+        public List<User> GetUsersList()
+        {
+            return _context.Users.Include(t => t.Profile).ToList();
         }
 
         public bool SaveUser(User user)

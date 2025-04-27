@@ -1,0 +1,57 @@
+/* user-list.component.scss */
+.user-list-container {
+    padding: 20px;
+    font-family: sans-serif;
+  
+    h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  
+    .user-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden; // to ensure border-radius works with table
+  
+      thead {
+        background-color: #f0f0f0;
+        text-align: left;
+  
+        th {
+          padding: 12px 15px;
+          font-weight: 600;
+          border-bottom: 2px solid #ddd;
+        }
+      }
+  
+      tbody {
+        tr {
+          &:nth-child(even) {
+            background-color: #f9f9f9;
+          }
+  
+          td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+          }
+  
+          button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+  
+            &:hover {
+              background-color: #0056b3;
+            }
+          }
+        }
+      }
+    }
+  }

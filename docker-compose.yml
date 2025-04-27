@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  rabbitmq:
+    image: "rabbitmq:3-management"
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"  # AMQP
+      - "15672:15672"  # Management UI
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+
+  mysql:
+    image: "mysql:8.0"
+    container_name: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: bookingdb
+      MYSQL_USER: bookinguser
+      MYSQL_PASSWORD: bookingpass
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  booking:
+    image: "booking:latest" # Replace with your actual built image
+    container_name: booking
+    depends_on:
+      - rabbitmq
+      - mysql
+    environment:
+      - RABBITMQ_HOST=rabbitmq
+      - MYSQL_HOST=mysql
+      - MYSQL_USER=bookinguser
+      - MYSQL_PASSWORD=bookingpass
+      - MYSQL_DATABASE=bookingdb
+    ports:
+      - "5000:5000" # Adjust based on API port
+
+volumes:
+  mysql_data:

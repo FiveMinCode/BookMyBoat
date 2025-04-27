@@ -16,7 +16,17 @@ MetricsSetup.Init(builder, logger);
 // Add services to the container.
 builder.Services.AddDbContext<UserManagementContext>(options =>
         options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowMyOrigin",
+    builder =>
+    {
+        builder.WithOrigins("http://localhost:4200")
+               .AllowAnyMethod()
+               .AllowAnyHeader();
+    });
+});
+builder.Services.AddAutoMapper(typeof(Program));
 // Add services to the container
 builder.Services.AddScoped<IUserManagementRepository, UserManagementRepository>();
 builder.Services.AddControllers();
@@ -42,7 +52,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseCors("AllowMyOrigin");
 app.UseHttpsRedirection();
 
 app.UseAuthentication();
